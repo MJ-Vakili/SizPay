@@ -1,0 +1,74 @@
+﻿@model NopFarsi.Payment.SizPay.Models.ConfigurationModel
+@inject Nop.Core.IWebHelper webHelper
+@{
+    Layout = "_ConfigurePlugin";
+}
+
+@await Component.InvokeAsync("StoreScopeConfiguration")
+
+<form asp-controller="SizPay" asp-action="Configure" method="post">
+    <div class="panel-group">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <nop-override-store-checkbox asp-for="UserName_OverrideForStore" asp-input="UserName" asp-store-scope="@Model.ActiveStoreScopeConfiguration" />
+                        <nop-label asp-for="UserName" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="UserName" />
+                        <span asp-validation-for="UserName"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <nop-override-store-checkbox asp-for="Password_OverrideForStore" asp-input="Password" asp-store-scope="@Model.ActiveStoreScopeConfiguration" />
+                        <nop-label asp-for="Password" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="Password" />
+                        <span asp-validation-for="Password"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <nop-override-store-checkbox asp-for="MerchantID_OverrideForStore" asp-input="MerchantID" asp-store-scope="@Model.ActiveStoreScopeConfiguration" />
+                        <nop-label asp-for="MerchantID" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="MerchantID" />
+                        <span asp-validation-for="MerchantID"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <nop-override-store-checkbox asp-for="TerminalID_OverrideForStore" asp-input="TerminalID" asp-store-scope="@Model.ActiveStoreScopeConfiguration" />
+                        <nop-label asp-for="TerminalID" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="TerminalID" />
+                        <span asp-validation-for="TerminalID"></span>
+                    </div>
+                </div>
+
+				<div class="form-group">
+                    <div class="col-md-3">
+                        <nop-override-store-checkbox asp-for="IsToman_OverrideForStore" asp-input="IsToman" asp-store-scope="@Model.ActiveStoreScopeConfiguration" />
+                        <nop-label asp-for="IsToman" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="IsToman" />
+                        <span asp-validation-for="IsToman"></span>
+                    </div>
+                </div>
+               
+
+                <div class="form-group">
+                    <div class="col-md-9 col-md-offset-3">
+                        <input type="submit" name="save" class="btn bg-primary" value="@T("Admin.Common.Save")" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

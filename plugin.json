@@ -1,0 +1,11 @@
+﻿{
+  "Group": "1_NopFarsi",
+  "FriendlyName": "سیزپی",
+  "SystemName": "NopFarsi.Payment.SizPay",
+  "Version": "3.40",
+  "SupportedVersions": [ "4.30" ],
+  "Author": "nopFarsi.ir",
+  "DisplayOrder": 1,
+  "FileName": "NopFarsi.Payment.SizPay.dll",
+  "Description": "This plugin allows paying with Pay"
+}

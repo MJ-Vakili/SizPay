@@ -1,0 +1,342 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>netcoreapp3.1</TargetFramework>
+		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<OutputPath>D:\E-Commerce\2-SourceCode4_3\nopCommerce_4.30_Source2\Presentation\Nop.Web\Plugins\NopFarsi.Payment.SizPay</OutputPath>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+		<OutputPath>bin\Release\NopFarsi.Payment.SizPay</OutputPath>
+	</PropertyGroup>
+	<ItemGroup>
+		<Compile Remove="1-Doc\**" />
+		<Compile Remove="2-Doc\**" />
+		<Compile Remove="2-Library\**" />
+		<EmbeddedResource Remove="1-Doc\**" />
+		<EmbeddedResource Remove="2-Doc\**" />
+		<EmbeddedResource Remove="2-Library\**" />
+		<None Remove="1-Doc\**" />
+		<None Remove="2-Doc\**" />
+		<None Remove="2-Library\**" />
+	</ItemGroup>
+	<ItemGroup>
+		<Compile Remove="Controllers\NopFarsiCustomerValidationController2.cs" />
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="System.ServiceModel.Duplex" Version="4.4.*" />
+		<PackageReference Include="System.ServiceModel.NetTcp" Version="4.4.*" />
+		<PackageReference Include="System.ServiceModel.Security" Version="4.4.*" />
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\..\Libraries\Nop.Core\Nop.Core.csproj" />
+		<ProjectReference Include="..\..\Libraries\Nop.Data\Nop.Data.csproj" />
+		<ProjectReference Include="..\..\Libraries\Nop.Services\Nop.Services.csproj" />
+		<ProjectReference Include="..\..\Presentation\Nop.Web.Framework\Nop.Web.Framework.csproj" />
+		<ProjectReference Include="..\..\Presentation\Nop.Web\Nop.Web.csproj" />
+	</ItemGroup>
+	<ItemGroup>
+		<Reference Include="Autofac">
+			<HintPath>2-Library\Autofac.dll</HintPath>
+			<Private>false</Private>
+		</Reference>
+		<Reference Include="FluentMigrator">
+			<HintPath>2-Library\FluentMigrator.dll</HintPath>
+			<Private>false</Private>
+		</Reference>
+		<Reference Include="FluentMigrator.Abstractions">
+			<HintPath>2-Library\FluentMigrator.Abstractions.dll</HintPath>
+			<Private>false</Private>
+		</Reference>
+		<Reference Include="FluentMigrator.Abstractions.resources">
+			<HintPath>2-Library\FluentMigrator.Abstractions.resources.dll</HintPath>
+			<Private>false</Private>
+		</Reference>
+		<Reference Include="FluentValidation">
+			<HintPath>2-Library\FluentValidation.dll</HintPath>
+			<Private>false</Private>
+		</Reference>
+		<Reference Include="linq2db">
+			<HintPath>2-Library\linq2db.dll</HintPath>
+			<Private>false</Private>
+		</Reference>
+		<Reference Include="Microsoft.AspNetCore.Html.Abstractions">
+			<HintPath>2-Library\Microsoft.AspNetCore.Html.Abstractions.dll</HintPath>
+			<Private>false</Private>
+		</Reference>
+		<Reference Include="Microsoft.AspNetCore.Http">
+			<HintPath>2-Library\Microsoft.AspNetCore.Http.dll</HintPath>
+			<Private>false</Private>
+		</Reference>
+		<Reference Include="Microsoft.AspNetCore.Http.Abstractions">
+			<HintPath>2-Library\Microsoft.AspNetCore.Http.Abstractions.dll</HintPath>
+			<Private>false</Private>
+		</Reference>
+		<Reference Include="Microsoft.AspNetCore.Http.Extensions">
+			<HintPath>2-Library\Microsoft.AspNetCore.Http.Extensions.dll</HintPath>
+			<Private>false</Private>
+		</Reference>
+		<Reference Include="Microsoft.AspNetCore.Http.Features">
+			<HintPath>2-Library\Microsoft.AspNetCore.Http.Features.dll</HintPath>
+			<Private>false</Private>
+		</Reference>
+		<Reference Include="Microsoft.AspNetCore.Mvc">
+			<HintPath>2-Library\Microsoft.AspNetCore.Mvc.dll</HintPath>
+			<Private>false</Private>
+		</Reference>
+		<Reference Include="Microsoft.AspNetCore.Mvc.Abstractions">
+			<HintPath>2-Library\Microsoft.AspNetCore.Mvc.Abstractions.dll</HintPath>
+			<Private>false</Private>
+		</Reference>
+		<Reference Include="Microsoft.AspNetCore.Mvc.Core">
+			<HintPath>2-Library\Microsoft.AspNetCore.Mvc.Core.dll</HintPath>
+			<Private>false</Private>
+		</Reference>
+		<Reference Include="Microsoft.AspNetCore.Mvc.ViewFeatures">
+			<HintPath>2-Library\Microsoft.AspNetCore.Mvc.ViewFeatures.dll</HintPath>
+			<Private>false</Private>
+		</Reference>
+		<Reference Include="Microsoft.AspNetCore.Routing">
+			<HintPath>2-Library\Microsoft.AspNetCore.Routing.dll</HintPath>
+			<Private>false</Private>
+		</Reference>
+		<Reference Include="Microsoft.AspNetCore.Routing.Abstractions">
+			<HintPath>2-Library\Microsoft.AspNetCore.Routing.Abstractions.dll</HintPath>
+			<Private>false</Private>
+		</Reference>
+		<Reference Include="Microsoft.Extensions.FileProviders.Abstractions">
+			<HintPath>2-Library\Microsoft.Extensions.FileProviders.Abstractions.dll</HintPath>
+			<Private>false</Private>
+		</Reference>
+		<Reference Include="Microsoft.Extensions.Primitives">
+			<HintPath>2-Library\Microsoft.Extensions.Primitives.dll</HintPath>
+			<Private>false</Private>
+		</Reference>
+		<Reference Include="Newtonsoft.Json">
+			<HintPath>2-Library\Newtonsoft.Json.dll</HintPath>
+			<Private>false</Private>
+		</Reference>
+		<Reference Include="Newtonsoft.Json.Bson">
+			<HintPath>2-Library\Newtonsoft.Json.Bson.dll</HintPath>
+			<Private>false</Private>
+		</Reference>
+		<Reference Include="RestSharp">
+			<HintPath>2-Library\RestSharp.dll</HintPath>
+			<Private>false</Private>
+		</Reference>
+	</ItemGroup>
+	<ItemGroup>
+		<None Update="Content\ajaxfilter.manager.js">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Content\images\toggle-gray.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Content\style.css">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Install\QuickFilter.sql">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Install\QuickFilterProduct.sql">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="plugin.json">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Script\jquery.maskedinput.min.js">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Views\AdminTabStripContentProduct.cshtml">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Views\Admin\Configure.cshtml">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Views\ApplyAll.cshtml">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Views\CheckoutWallet.cshtml">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Views\Pay.cshtml">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Views\Configure.cshtml">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Views\CustomerDetailViewComponent.cshtml">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Views\CustomerRoleProfit.cshtml">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Views\FormulGenerator - Copy.cshtml">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Views\FormulGenerator.cshtml">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Views\FormulGeneratorCreate.cshtml">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Views\Info.cshtml">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Views\NFSpecificationAttribute\Create.cshtml">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Views\NFSpecificationAttribute\Edit.cshtml">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Views\NFSpecificationAttribute\List.cshtml">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Views\NFSpecificationAttribute\OptionCreatePopup.cshtml">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Views\NFSpecificationAttribute\OptionEditPopup.cshtml">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Views\NFSpecificationAttribute\_CreateOrUpdate.cshtml">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Views\NFSpecificationAttribute\_CreateOrUpdate.Info.cshtml">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Views\NFSpecificationAttribute\_CreateOrUpdate.Options.cshtml">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Views\NFSpecificationAttribute\_CreateOrUpdate.UsedByProducts.cshtml">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Views\NFSpecificationAttribute\_CreateOrUpdateOption.cshtml">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Views\NopFarsiCustomerValidation\Login.cshtml">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Views\NopFarsiCustomerValidation\MobileMyAccountPublic.cshtml">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Views\NopFarsiCustomerValidation\NFChangePhone.cshtml">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Views\NopFarsiCustomerValidation\NFRegister.cshtml">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Views\NopFarsiCustomerValidation\NopFarsiRegister.cshtml">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Views\NopFarsiCustomerValidation\PasswordRecovery.cshtml">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Views\NopFarsiCustomerValidation\RegistrationVerification.cshtml">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Views\NopFarsiCustomerValidation\_CheckUsernameAvailability.cshtml">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Views\NopFarsiCustomerValidation\_CustomerAttributes.cshtml">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Views\NopFarsiCustomerValidation\_ExternalAuthentication.Errors.cshtml">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Views\NopFarsiRegister2.cshtml">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Views\Pay.cshtml">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Views\Error.cshtml">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Views\PaymentInfo.cshtml">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Views\PaymentInformation.cshtml">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Views\PaymentMellat\Configure.cshtml">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Views\PaymentMellat\Error.cshtml">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Views\PaymentMellat\Pay.cshtml">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Views\PaymentMellat\PaymentInfo.cshtml">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Views\PaymentMellat\PaymentResult.cshtml">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Views\ProductDetailFormulViewComponent.cshtml">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Views\ProductListChanges.cshtml">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Views\ProductSpecifications.cshtml">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Views\QuickFilter\FilterAttributes.cshtml">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Views\QuickFilter\FilterManufacturers.cshtml">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Views\QuickFilter\FilterPriceRange.cshtml">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Views\QuickFilter\Filters.cshtml">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Views\QuickFilter\FilterSpecifications.cshtml">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Views\QuickFilter\FilterVendors.cshtml">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Views\QuickFilter\ProductsInGridOrLines.cshtml">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Views\QuickFilter\PublicInfo.cshtml">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Views\SliderImage.cshtml">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Views\Sms\Configuration.cshtml">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Views\Sms\PhonePartial.cshtml">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Views\StaticValue.cshtml">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Views\WalletMyAccountLink.cshtml">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Views\WalletMyAccountPublic.cshtml">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Views\Web.config">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Views\_ConfigurePluginNop4you.cshtml">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Views\_ViewImports.cshtml">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
+	<ItemGroup>
+		<WCFMetadata Include="Connected Services" />
+	</ItemGroup>
+	<PropertyGroup />
+</Project>
